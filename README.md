@@ -69,7 +69,8 @@ This project was created for learning and practicing front-end web development, 
 
 **Suhan Kumar**
 
-GitHub: Add your GitHub profile URL here.
+https://suhankhiani.lovable.app
+
 
 ## 📄 License
 
