@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101014">
+  <title>MiniMart — Everyday, Elevated</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement"><span>✦</span> Free shipping on orders over $75 <span class="announcement-right">Thoughtfully picked. Fairly priced.</span></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="MiniMart home"><span class="brand-icon">m</span> mini<span>mart.</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#shop">Shop all</a><a class="nav-link" href="#shop" data-jump-category="Home">Home</a><a class="nav-link" href="#shop" data-jump-category="Tech">Tech</a><a class="nav-link" href="#shop" data-jump-category="Lifestyle">Lifestyle</a>
+    </nav>
+    <div class="header-actions">
+      <button id="searchFocusBtn" class="header-icon" aria-label="Focus search">⌕</button>
+      <button id="cartOpenBtn" class="cart-trigger" aria-label="Open shopping cart"><span class="bag-icon">▱</span><span>Cart</span><span id="cartCount" class="cart-count">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> THE EVERYDAY EDIT</div>
+        <h1>Small things.<br><em>Better living.</em></h1>
+        <p>Discover useful, beautiful finds for your space, your routine, and everywhere in between.</p>
+        <a href="#shop" class="hero-cta">Explore the collection <span>↗</span></a>
+        <div class="hero-trust"><div class="trust-avatars"><span>J</span><span>A</span><span>M</span></div><span>Loved by <strong>2,400+</strong> happy shoppers</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-shape shape-one"></div><div class="hero-shape shape-two"></div>
+        <div class="hero-product product-headphones"><div class="headband"></div><div class="earcup left"></div><div class="earcup right"></div></div>
+        <div class="hero-product product-vase"><div class="vase-neck"></div><div class="vase-body"></div><div class="vase-stem stem-a"></div><div class="vase-stem stem-b"></div><div class="vase-leaf leaf-a"></div><div class="vase-leaf leaf-b"></div></div>
+        <div class="hero-product product-lamp"><div class="lamp-shade"></div><div class="lamp-stem"></div><div class="lamp-base"></div></div>
+        <div class="floating-tag"><span class="tag-dot"></span> Curated for you</div>
+        <div class="hero-caption">GOOD DESIGN, <span>GOOD ENERGY.</span></div>
+      </div>
+      <div class="hero-index"><span>01</span><i></i><span>03</span></div>
+    </section>
+
+    <section class="value-strip">
+      <div><span class="value-icon">✧</span><span><strong>Curated quality</strong><small>Picked with purpose</small></span></div>
+      <div><span class="value-icon">↗</span><span><strong>Fair prices</strong><small>Good things, less fuss</small></span></div>
+      <div><span class="value-icon">♧</span><span><strong>Easy returns</strong><small>30-day return window</small></span></div>
+      <div><span class="value-icon">⌁</span><span><strong>Secure checkout</strong><small>Safe by design</small></span></div>
+    </section>
+
+    <section id="shop" class="shop-section">
+      <div class="shop-topline"><div><div class="eyebrow dark-eyebrow">YOUR NEXT FAVORITE</div><h2>Shop the collection<span class="heading-dot">.</span></h2></div><p>Everyday essentials, a little more special.</p></div>
+      <div class="shop-toolbar">
+        <div id="categoryFilters" class="category-filters">
+          <button class="filter-chip active" data-category="All">All products <span id="allCount">12</span></button>
+          <button class="filter-chip" data-category="Tech">Tech</button>
+          <button class="filter-chip" data-category="Home">Home</button>
+          <button class="filter-chip" data-category="Lifestyle">Lifestyle</button>
+          <button class="filter-chip" data-category="Accessories">Accessories</button>
+        </div>
+        <div class="toolbar-right"><label class="search-field"><span>⌕</span><input id="productSearch" type="search" placeholder="Find something..." autocomplete="off"></label><label class="sort-field"><span>Sort:</span><select id="sortSelect" aria-label="Sort products"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Name A–Z</option><option value="rating">Top rated</option></select></label></div>
+      </div>
+      <div class="results-line"><span id="resultsLabel">Showing 12 thoughtfully picked products</span><button id="clearFilters" class="clear-filters">Clear filters <span>×</span></button></div>
+      <div id="productGrid" class="product-grid" aria-live="polite"></div>
+      <div id="noResults" class="no-results hidden"><div>⌕</div><h3>Nothing on this shelf</h3><p>Try a different search or category.</p><button id="resetSearch" class="outline-btn">Reset filters</button></div>
+      <div class="collection-bottom"><span>MINIMART / THE EVERYDAY EDIT</span><span>GOOD FINDS, GOOD FEELING <b>✳</b></span></div>
+    </section>
+
+    <section class="newsletter">
+      <div><div class="eyebrow">A LITTLE GOOD IN YOUR INBOX</div><h2>Stay in the know<span>.</span></h2><p>New finds, fresh ideas, and the occasional treat. No clutter.</p></div>
+      <form id="newsletterForm" class="newsletter-form"><input type="email" id="newsletterEmail" placeholder="Your email address" aria-label="Your email address" required><button type="submit">Count me in <span>↗</span></button><small>By subscribing, you agree to receive MiniMart updates.</small></form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#"><span class="brand-icon">m</span> mini<span>mart.</span></a><p>Little upgrades for everyday life.</p><div class="footer-links"><a href="#shop">Shop</a><a href="#shop">Our picks</a><a href="#top">Back to top ↑</a></div><small>© 2026 MiniMart. Demo storefront for learning.</small></footer>
+
+  <div id="cartOverlay" class="overlay hidden"></div>
+  <aside id="cartDrawer" class="cart-drawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-header"><div><div class="eyebrow dark-eyebrow">YOUR GOOD FINDS</div><h2>Your cart <span id="drawerCount">(0)</span></h2></div><button id="cartCloseBtn" class="close-btn" aria-label="Close cart">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div id="emptyCart" class="empty-cart"><div class="empty-bag">▱</div><h3>Your cart feels light.</h3><p>Let's find something you love.</p><button id="continueShopping" class="dark-btn">Explore products <span>↗</span></button></div>
+    <div id="cartSummary" class="cart-summary hidden">
+      <div class="shipping-progress"><div class="shipping-message" id="shippingMessage">You're $75 away from free shipping.</div><div class="progress-track"><span id="shippingProgress"></span></div></div>
+      <div class="summary-row"><span>Subtotal</span><strong id="subtotalValue">$0.00</strong></div>
+      <div class="summary-row"><span>Shipping</span><strong id="shippingValue">$6.95</strong></div>
+      <div class="summary-row total-row"><span>Total</span><strong id="totalValue">$6.95</strong></div>
+      <p class="tax-note">Taxes calculated at checkout. Demo only — no payment is collected.</p>
+      <button id="checkoutBtn" class="checkout-btn">Continue to checkout <span>→</span></button>
+      <div class="secure-note">♢ Secure checkout · Easy returns</div>
+    </div>
+  </aside>
+
+  <div id="checkoutModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="checkout-modal"><button id="checkoutCloseBtn" class="close-btn modal-close" aria-label="Close checkout">×</button><div class="checkout-mark">✓</div><div class="eyebrow dark-eyebrow">DEMO CHECKOUT</div><h2 id="checkoutTitle">Looking good.</h2><p id="checkoutMessage">Your order summary is ready.</p><div class="checkout-total"><span>Order total</span><strong id="checkoutTotal">$0.00</strong></div><p class="checkout-disclaimer">This is a frontend demo. It does not collect payment details or create a real order.</p><button id="finishCheckoutBtn" class="dark-btn">Back to shopping <span>↗</span></button></div>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
